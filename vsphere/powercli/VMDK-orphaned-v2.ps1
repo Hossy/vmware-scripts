@@ -1,3 +1,6 @@
+#Copyright (C) 2016 John Hossbach
+#See LICENSE file for full details
+
 $activity = 'Initializing'
 Write-Progress -Activity $activity -Status 'Gathering environment information' -CurrentOperation 'Getting list of all datastores' -percentComplete 0
 #$arrDS = Get-Datastore | Sort-Object -property Name
