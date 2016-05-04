@@ -1,6 +1,9 @@
 #Copyright (C) 2016 John Hossbach
 #See LICENSE file for full details
 
+#Originally from http://virtuallyjason.blogspot.com/2013/08/orphaned-vmdk-files.html
+#Modified by John Hossbach
+
 $activity = 'Initializing'
 Write-Progress -Activity $activity -Status 'Gathering environment information' -CurrentOperation 'Getting list of all datastores' -percentComplete 0
 #$arrDS = Get-Datastore | Sort-Object -property Name
@@ -73,8 +76,6 @@ foreach ($ds in $arrDS) {
 	$i++
 }
 "VMS scan execution time: {0:c}" -f ((Get-Date) - $begin) | Out-Host
-
-#http://virtuallyjason.blogspot.com/2013/08/orphaned-vmdk-files.html
 
 $report = @()
 $activity = 'Finding orphaned VMDK files'
