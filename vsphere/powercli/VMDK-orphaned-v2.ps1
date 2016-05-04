@@ -75,7 +75,7 @@ foreach ($ds in $arrDS) {
 	}
 	$i++
 }
-"VMS scan execution time: {0:c}" -f ((Get-Date) - $begin) | Out-Host
+"VMX scan execution time: {0:c}" -f ((Get-Date) - $begin) | Out-Host
 
 $report = @()
 $activity = 'Finding orphaned VMDK files'
